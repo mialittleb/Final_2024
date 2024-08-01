@@ -51,6 +51,7 @@ barchartGC(~infected+ treatment,data=males, type="percent")
 
 ```
 
+This table shows that males who got the vaccine are less likely to get covid than people who got placebo.
 
 #### Numerical Results
 
@@ -60,6 +61,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+This shows that 74% of males who took the placebo got covid 19 and 26% who took the vaccine got covid 19 as well.
+
 #### Inferential Results
 
 ```{r}
@@ -68,7 +71,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-
+Both the chi and fisher test have the same p-value of p-value= 0.000000000000002 which is lower than 0.5 therefore we reject the null hypothesis.
 
 
 ## Females 
@@ -96,6 +99,8 @@ barchartGC(~infected+ treatment,data=females, type="percent")
 
 ```
 
+This shows that females who took the vaccine had a lower rate of getting covid 19 as opposed to those who took the placebo
+
 
 #### Numerical Results 
 
@@ -105,6 +110,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+This shows that 65% of females who took the placebo got covid 19 while 36% of females who got the vaccine comtracted covid 19.
 
 
 
@@ -116,7 +122,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-
+The results of the p-value for chi and fishers test is p-value= 0.000000001247 which is lower than 0.5 therefore we reject the null hypothesis.
 
 
 ## LGBTQ 
@@ -143,7 +149,7 @@ barchartGC(~LGBTQ + treatment,data=FinalData, type="percent")
 
 ```
 
-
+This shows that about an equal amount of the LBGTQ got covid rather or not the received the vaccine or placebo.
 
 #### Numerical Results 
 
@@ -153,6 +159,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+This shows that about 50% of LGBTQ who recieved the placebo contracted covud 19, while about 50% of LBGTQ who recieved the covid 29 vaccine also contracted covid 19.
 
 
 #### Inferential Results
@@ -163,17 +170,17 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-
+P-value for chi-squared test is 0.1099 and fishers test is 0.1085 which is both smaller than 0.5 therefore we reject the null hypothesis.
 
 ## Druggies 
 
-$H_0$:Covid921 vaccine is not effective in druggies.
 
-$H_A$:Covid921 vaccine is effective in druggies.
+$H_A$:Covid921 v$H_0$:Covid921 vaccine is not effective in druggies.
+accine is effective in druggies.
 
 ### Methods
  
-The result is a categorical variable ~b categorical variable 
+The result is a categorical variable ~categorical variable 
 Therefore i use CAT~CAT helper file.
  
  
@@ -187,6 +194,9 @@ barchartGC(~DrugUser + treatment,data=FinalData, type="percent")
 
 ```
 
+This shows that about an equal amount of drugusers contracted covid 19 rather they received the vaccine or placebo.
+
+
 #### Numerical Results 
 
 ```{r}
@@ -195,6 +205,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+This shows that aboyt 50% of drugusers who received placebo contracted covid 19 while about 50% of drugusers who got the vaccine contracted covid 19.
 
 #### Inferential Results
 
@@ -206,10 +217,71 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The p-value for chi-square = , while the p-value for the fisher test= 0.8355 which is both smaller than 0.5 therefore we reject the null hypothesis.
 
 
 
 
 
+# Overall Results and Conclusions 
 
-# Overall Results and Conclusions
+
+$H_0$:Covid921 vaccine is not effective in males.
+
+$H_A$:Covid921 vaccine is effective in males.
+
+Treatment is CAT
+Sex is CAT
+So i use the CAT~CAT helper file
+
+This table shows that males who got the vaccine are less likely to get covid than people who got placebo. 
+
+This shows that 74% of males who took the placebo got covid 19 and 26% who took the vaccine got covid 19 as well. 
+
+
+Both the chi and fisher test have the same p-value of p-value= 0.000000000000002 which is lower than 0.5 therefore we reject the null hypothesis.
+
+$H_0$:Covid921 vaccine is not effective in females.
+
+$H_A$:Covid921 vaccine is effective in females.
+
+Treatment is CAT 
+Sex is CAT 
+So i use the CAT~CAT helper file
+
+This shows that females who took the vaccine had a lower rate of getting covid 19 as opposed to those who took the placebo
+
+his shows that 65% of females who took the placebo got covid 19 while 36% of females who got the vaccine comtracted covid 19.
+
+The results of the p-value for chi and fishers test is p-value= 0.000000001247 which is lower than 0.5 therefore we reject the null hypothesis. 
+
+$H_0$:Covid921 vaccine is not effective in LGBTQ.
+
+$H_A$:Covid921 vaccine is effective in LGBTQ. 
+
+The result is a categorical variable ~ categorical variable 
+Therefore i use CAT~CAT helper file. 
+
+This shows that about an equal amount of the LBGTQ got covid rather or not they received the vaccine or placebo.
+
+This shows that about 50% of LGBTQ who recieved the placebo contracted covud 19, while about 50% of LBGTQ who recieved the covid 29 vaccine also contracted covid 19. 
+
+P-value for chi-squared test is 0.1099 and fishers test is 0.1085 which is both smaller than 0.5 therefore we reject the null hypothesis. 
+
+$H_A$:Covid921 v$H_0$:Covid921 vaccine is not effective in druggies.
+accine is effective in druggies. 
+
+The result is a categorical variable ~categorical variable 
+Therefore i use CAT~CAT helper file.
+ 
+This shows that about an equal amount of drugusers contracted covid 19 rather they received the vaccine or placebo. 
+
+This shows that aboyt 50% of drugusers who received placebo contracted covid 19 while about 50% of drugusers who got the vaccine contracted covid 19. 
+
+The p-value for chi-square = , while the p-value for the fisher test= 0.8355 which is both smaller than 0.5 therefore we reject the null hypothesis
+
+
+
+
+ 
+
