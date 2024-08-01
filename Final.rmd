@@ -125,16 +125,43 @@ $H_0$:Covid921 vaccine is not effective in LGBTQ.
 
 $H_A$:Covid921 vaccine is effective in LGBTQ.
 
-### Methods
+### Methods 
+
+Treatment is CAT 
+Sex is CAT 
+So i use the CAT~CAT helper file
+
+
 
 ### Descriptive Results
 
 #### Graphical Results
 
+```{r}
+barchartGC(~LGBTQ + treatment,data=FinalData)
+barchartGC(~LGBTQ + treatment,data=FinalData, type="percent")
+
+```
+
+
+
 #### Numerical Results 
+
+```{r}
+table1 <- xtabs(~LGBTQ + treatment, data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
 
 #### Inferential Results
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 
 
@@ -146,24 +173,41 @@ $H_A$:Covid921 vaccine is effective in druggies.
 
 ### Methods
  
-The result is a categorical variable
+The result is a categorical variable ~b categorical variable 
+Therefore i use CAT~CAT helper file.
  
  
 ### Descriptive Results
 
 #### Graphical Results
 
+```{r}
+barchartGC(~DrugUser + treatment,data=FinalData)
+barchartGC(~DrugUser + treatment,data=FinalData, type="percent")
+
+```
+
 #### Numerical Results 
+
+```{r}
+table1 <- xtabs(~DrugUser + treatment, data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
 
 #### Inferential Results
 
 
 
 ```{r}
-males=filter(FinalData,finaldata$sex=="M") 
-barchartGC(treatment + infected,data=males) 
-barchartGC((~treatment + infected,data=males,data= type="percent")
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
 ```
+
+
+
 
 
 
