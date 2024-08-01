@@ -278,7 +278,7 @@ This shows that about an equal amount of drugusers contracted covid 19 rather th
 
 This shows that aboyt 50% of drugusers who received placebo contracted covid 19 while about 50% of drugusers who got the vaccine contracted covid 19. 
 
-The p-value for chi-square = , while the p-value for the fisher test= 0.8355 which is both smaller than 0.5 therefore we reject the null hypothesis
+The p-value for chi-square = , while the p-value for the fisher test= 0.8355 which is both smaller than 0.5 therefore we reject the null hypothesis   
 
 
 
