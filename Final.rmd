@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study Final2024"
-author: "Put your name here!"
+author: "Amia Little"
 output: 
   html_document:
     number_sections: true
@@ -22,19 +22,150 @@ mutate(across(where(is.character), as.factor))
 
 # Introduction
 
-A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the
+four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 ## Males
 
+$H_0$:Covid921 vaccine is not effective in males.
 
-## Females
-
-
-## LGBTQ
+$H_A$:Covid921 vaccine is effective in males.
 
 
 
-## Druggies
+### Methods
+
+Treatment is CAT
+Sex is CAT
+So i use the CAT~CAT helper file
+
+
+### Descriptive Results
+
+#### Graphical Results 
+
+```{r}
+males=filter(FinalData,FinalData$sex=="M")
+barchartGC(~treatment + infected,data=males)
+barchartGC(~infected+ treatment,data=males, type="percent")
+
+```
+
+
+#### Numerical Results
+
+```{r}
+table1 <- xtabs(~treatment + infected, data=males)
+rowPerc(table1)
+colPerc(table1)
+```
+
+#### Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+
+
+## Females 
+
+$H_0$:Covid921 vaccine is not effective in females.
+
+$H_A$:Covid921 vaccine is effective in females.
+
+
+### Methods
+
+Treatment is CAT 
+Sex is CAT 
+So i use the CAT~CAT helper file
+
+### Descriptive Results
+
+
+#### Graphical Results 
+
+```{r}
+females=filter(FinalData,FinalData$sex=="F")
+barchartGC(~treatment + infected,data=females)
+barchartGC(~infected+ treatment,data=females, type="percent")
+
+```
+
+
+#### Numerical Results 
+
+```{r}
+table1 <- xtabs(~treatment + infected, data=females)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+
+
+#### Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+
+
+## LGBTQ 
+
+$H_0$:Covid921 vaccine is not effective in LGBTQ.
+
+$H_A$:Covid921 vaccine is effective in LGBTQ.
+
+### Methods
+
+### Descriptive Results
+
+#### Graphical Results
+
+#### Numerical Results 
+
+#### Inferential Results
+
+
+
+
+## Druggies 
+
+$H_0$:Covid921 vaccine is not effective in druggies.
+
+$H_A$:Covid921 vaccine is effective in druggies.
+
+### Methods
+ 
+The result is a categorical variable
+ 
+ 
+### Descriptive Results
+
+#### Graphical Results
+
+#### Numerical Results 
+
+#### Inferential Results
+
+
+
+```{r}
+males=filter(FinalData,finaldata$sex=="M") 
+barchartGC(treatment + infected,data=males) 
+barchartGC((~treatment + infected,data=males,data= type="percent")
+```
+
+
 
 
 # Overall Results and Conclusions
